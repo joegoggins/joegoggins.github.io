@@ -1,15 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://joegoggins.github.io/blog/archives/</loc>
-        <lastmod>2013-10-02T22:35:13-05:00</lastmod>
+        <loc>http://thenerdings.com/blog/2013/10/02/hello-octopress/</loc>
+        <lastmod>2013-10-02T23:05:08-05:00</lastmod>
     </url>
     <url>
-        <loc>http://joegoggins.github.io/</loc>
-        <lastmod>2013-10-02T22:35:13-05:00</lastmod>
+        <loc>http://thenerdings.com/blog/archives/</loc>
+        <lastmod>2013-10-02T23:05:08-05:00</lastmod>
     </url>
     <url>
-        <loc>http://joegoggins.github.io/robots.txt</loc>
+        <loc>http://thenerdings.com/</loc>
+        <lastmod>2013-10-02T23:05:08-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://thenerdings.com/robots.txt</loc>
         <lastmod>2013-10-02T22:35:13-05:00</lastmod>
     </url>
 </urlset>
