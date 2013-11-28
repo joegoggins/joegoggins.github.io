@@ -7,7 +7,7 @@ categories:
 ---
 
 This here blog will soon be the location of http://thenerdings.blogspot.com,
-once I migrate everything over.......
+once I migrate everything over.....
 
 Octopress and Jekyll seem awesome! I'm jazzed to be able to write in my tricked-out text editor,
 use git + github.io/github-pages to deploy, and to develop blog posts the way I develop code.
