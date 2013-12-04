@@ -6,10 +6,6 @@ comments: true
 categories: 
 ---
 
-This here blog will soon be the location of http://thenerdings.blogspot.com,
-once I migrate everything over.....
+This here blog is the new location of http://thenerdings.blogspot.com...
 
-Octopress and Jekyll seem awesome! I'm jazzed to be able to write in my tricked-out text editor,
-use git + github.io/github-pages to deploy, and to develop blog posts the way I develop code.
-It jives with how I roll.  For a dude who gets huffy-puffy when the pointy-clicky things fight me,
-a blogging platform made for hackers seems like a wonderful thing...here we go.
+Octopress and Jekyll seem awesome! I'm jazzed to be able to write in my tricked-out text editor, use git + github.io/github-pages to deploy, and to develop blog posts the way I develop code.  It jives with how I roll.  For a dude who gets huffy-puffy when the pointy-clicky things fight me, a blogging platform made for hackers seems like a wonderful thing...here we go.

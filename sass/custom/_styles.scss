@@ -12,4 +12,9 @@ body > header h1 a, body>header h1 a:visited, body>header h1 a:hover {
 body > header h2  {
   font-style: italic;
   color: #000;
+  a, a:visited {
+    font-style: italic;
+    text-decoration: none;
+    color: #000;
+  }
 }
