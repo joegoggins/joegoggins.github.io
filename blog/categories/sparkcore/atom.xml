@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[The Nerdings]]></title>
-  <link href="http://thenerdings.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: SparkCore | The Nerdings]]></title>
+  <link href="http://thenerdings.com/blog/categories/sparkcore/atom.xml" rel="self"/>
   <link href="http://thenerdings.com/"/>
   <updated>2013-12-04T02:03:36-06:00</updated>
   <id>http://thenerdings.com/</id>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Controlling a Spark Core Remote Control Car With a Bash Script]]></title>
+    <title type="html"><![CDATA[Controlling a Spark Core remote control car with a bash script]]></title>
     <link href="http://thenerdings.com/blog/2013/12/04/controlling-spark-core-remote-control-car-with-a-bash-script/"/>
     <updated>2013-12-04T01:14:00-06:00</updated>
     <id>http://thenerdings.com/blog/2013/12/04/controlling-spark-core-remote-control-car-with-a-bash-script</id>
@@ -28,7 +28,7 @@
 
 <p>The idea of this bash script is to set SPARK_CORE_DEVICE_ID and SPARK_CORE_ACCESS_TOKEN, then run a pre-defined function that loops for input and translates that <a href="http://docs.spark.io/#/api">Spark Cloud API</a> curl commands. Please fork or comment if applicable.</p>
 
-<div><script src='https://gist.github.com/7777824.js'></script>
+<p><div><script src='https://gist.github.com/7777824.js'></script>
 <noscript><pre><code># About
 # =====
 #
@@ -88,20 +88,7 @@ function rc() {
   echo $_command
   echo $_command | bash
 }</code></pre></noscript></div>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hello Octopress (Goodbye Blogger)]]></title>
-    <link href="http://thenerdings.com/blog/2013/10/02/hello-octopress/"/>
-    <updated>2013-10-02T22:55:00-05:00</updated>
-    <id>http://thenerdings.com/blog/2013/10/02/hello-octopress</id>
-    <content type="html"><![CDATA[<p>This here blog is the new location of <a href="http://thenerdings.blogspot.com...">http://thenerdings.blogspot.com&#8230;</a></p>
-
-<p>Octopress and Jekyll seem awesome! I&rsquo;m jazzed to be able to write in my tricked-out text editor, use git + github.io/github-pages to deploy, and to develop blog posts the way I develop code.  It jives with how I roll.  For a dude who gets huffy-puffy when the pointy-clicky things fight me, a blogging platform made for hackers seems like a wonderful thing&hellip;here we go.</p>
+</p>
 ]]></content>
   </entry>
   

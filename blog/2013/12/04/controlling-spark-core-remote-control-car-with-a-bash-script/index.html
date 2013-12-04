@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>The Nerdings</title>
+  <title>Controlling a Spark Core Remote Control Car With a Bash Script - The Nerdings</title>
   <meta name="author" content="Joe Goggins">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://thenerdings.com">
+  <link rel="canonical" href="http://thenerdings.com/blog/2013/12/04/controlling-spark-core-remote-control-car-with-a-bash-script">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="The Nerdings" type="application/atom+xml">
@@ -75,15 +75,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/12/04/controlling-spark-core-remote-control-car-with-a-bash-script/">Controlling a Spark Core Remote Control Car With a Bash Script</a></h1>
+      <h1 class="entry-title">Controlling a Spark Core Remote Control Car With a Bash Script</h1>
     
     
       <p class="meta">
@@ -106,7 +103,7 @@
   </header>
 
 
-  <div class="entry-content"><p>I just wrote a bash script to control a Spark Core powered remote control car over the internet. Hit &ldquo;f&rdquo; to go forward, hit &ldquo;b&rdquo; to backward, etc. Kinda sweet.</p>
+<div class="entry-content"><p>I just wrote a bash script to control a Spark Core powered remote control car over the internet. Hit &ldquo;f&rdquo; to go forward, hit &ldquo;b&rdquo; to backward, etc. Kinda sweet.</p>
 
 <p>I grabbed the <a href="http://docs.spark.io/#/shields">RC Car Spark Core firmware code</a>, compiled it + flashed it to the core over USB by following <a href="https://github.com/spark/core-firmware">these instructions</a>. Essentially, I replaced the src/application.cpp with the code from the site and ran <code>make clean dependents all</code>, then used dfu-util to flash it.</p>
 
@@ -180,22 +177,16 @@ function rc() {
 
 
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/10/02/hello-octopress/">Hello Octopress (Goodbye Blogger)</a></h1>
-    
-    
-      <p class="meta">
-        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Joe Goggins</span></span>
+
+      
 
 
 
@@ -207,29 +198,38 @@ function rc() {
   
 
 
-<time datetime="2013-10-02T22:55:00-05:00" pubdate data-updated="true">Oct 2<span>nd</span>, 2013</time>
-        
-      </p>
+<time datetime="2013-12-04T01:14:00-06:00" pubdate data-updated="true">Dec 4<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/sparkcore/'>SparkCore</a>
+  
+</span>
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>This here blog is the new location of <a href="http://thenerdings.blogspot.com...">http://thenerdings.blogspot.com&#8230;</a></p>
-
-<p>Octopress and Jekyll seem awesome! I&rsquo;m jazzed to be able to write in my tricked-out text editor, use git + github.io/github-pages to deploy, and to develop blog posts the way I develop code.  It jives with how I roll.  For a dude who gets huffy-puffy when the pointy-clicky things fight me, a blogging platform made for hackers seems like a wonderful thing&hellip;here we go.</p>
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://thenerdings.com/blog/2013/12/04/controlling-spark-core-remote-control-car-with-a-bash-script/" data-via="" data-counturl="http://thenerdings.com/blog/2013/12/04/controlling-spark-core-remote-control-car-with-a-bash-script/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/10/02/hello-octopress/" title="Previous Post: Hello Octopress (Goodbye Blogger)">&laquo; Hello Octopress (Goodbye Blogger)</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -253,6 +253,7 @@ function rc() {
 
   
 </aside>
+
 
     </div>
   </div>
