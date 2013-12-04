@@ -4,7 +4,7 @@
   <title><![CDATA[The Nerdings]]></title>
   <link href="http://thenerdings.com/atom.xml" rel="self"/>
   <link href="http://thenerdings.com/"/>
-  <updated>2013-10-02T23:09:28-05:00</updated>
+  <updated>2013-11-28T15:46:29-06:00</updated>
   <id>http://thenerdings.com/</id>
   <author>
     <name><![CDATA[Joe Goggins]]></name>
@@ -19,7 +19,7 @@
     <updated>2013-10-02T22:55:00-05:00</updated>
     <id>http://thenerdings.com/blog/2013/10/02/hello-octopress</id>
     <content type="html"><![CDATA[<p>This here blog will soon be the location of <a href="http://thenerdings.blogspot.com,">http://thenerdings.blogspot.com,</a>
-once I migrate everything over&hellip;</p>
+once I migrate everything over&hellip;..</p>
 
 <p>Octopress and Jekyll seem awesome! I&rsquo;m jazzed to be able to write in my tricked-out text editor,
 use git + github.io/github-pages to deploy, and to develop blog posts the way I develop code.
