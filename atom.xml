@@ -4,7 +4,7 @@
   <title><![CDATA[The Nerdings]]></title>
   <link href="http://thenerdings.com/atom.xml" rel="self"/>
   <link href="http://thenerdings.com/"/>
-  <updated>2013-12-04T02:14:24-06:00</updated>
+  <updated>2014-06-24T23:04:55-05:00</updated>
   <id>http://thenerdings.com/</id>
   <author>
     <name><![CDATA[Joe Goggins]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The Brutality of Git]]></title>
+    <link href="http://thenerdings.com/blog/2014/06/24/the-brutality-of-git/"/>
+    <updated>2014-06-24T22:53:58-05:00</updated>
+    <id>http://thenerdings.com/blog/2014/06/24/the-brutality-of-git</id>
+    <content type="html"><![CDATA[<p>I love Git. Live by it. Swear by it. Interact with it all the damn time. I mostly love it.</p>
+
+<p>Sometimes it stabs me in the face though&hellip;while on master:</p>
+
+<pre><code># Grab the latest
+git pull
+
+# Deploy a branch to heroku: 
+git push --force staging feature/the_awesome_sauce:master
+</code></pre>
+
+<p>Then boom, the shank to the face:</p>
+
+<p><strong>feature/the_awesome_sauce is not deployed like I think</strong></p>
+
+<p>Instead, a old commit from the feature/the_awesome_sauce is deployed, arrrrr&hellip;</p>
+
+<p>They be different:</p>
+
+<pre><code>the_project$ git show-ref feature/the_awesome_sauce
+6c9900faca9g2d758bf6g00a7418af37b315f3a7 refs/heads/feature/private_libraries
+ecc4c76220c5d399c0e1d53e950e456a4329ad56 refs/remotes/origin/feature/private_libraries
+</code></pre>
+
+<p>Don&rsquo;t get stabbed in the face. Know the difference between remote and local branches.</p>
+
+<p>Use <code>git push --force staging origin/feature/the_awesome_sauce:master</code> next time.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Controlling a Spark Core Remote Control Car With a Bash Script]]></title>
