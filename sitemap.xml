@@ -2,18 +2,28 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://thenerdings.com/blog/2013/10/02/hello-octopress/</loc>
-        <lastmod>2013-11-28T14:14:08-06:00</lastmod>
+        <lastmod>2013-12-04T01:26:59-06:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://thenerdings.com/blog/2013/12/04/controlling-spark-core-remote-control-car-with-a-bash-script/
+        </loc>
+        <lastmod>2013-12-04T02:01:57-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://thenerdings.com/blog/2014/06/24/the-brutality-of-git/</loc>
+        <lastmod>2014-06-24T23:03:50-05:00</lastmod>
     </url>
     <url>
         <loc>http://thenerdings.com/blog/archives/</loc>
-        <lastmod>2013-11-28T14:14:08-06:00</lastmod>
+        <lastmod>2014-06-24T23:03:50-05:00</lastmod>
     </url>
     <url>
         <loc>http://thenerdings.com/</loc>
-        <lastmod>2013-11-28T14:14:08-06:00</lastmod>
+        <lastmod>2014-06-24T23:03:50-05:00</lastmod>
     </url>
     <url>
         <loc>http://thenerdings.com/robots.txt</loc>
-        <lastmod>2013-10-02T22:35:13-05:00</lastmod>
+        <lastmod>2013-12-04T01:21:29-06:00</lastmod>
     </url>
 </urlset>

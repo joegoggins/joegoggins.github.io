@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>The Nerdings</title>
+  <title>Controlling a Spark Core Remote Control Car With a Bash Script - The Nerdings</title>
   <meta name="author" content="Joe Goggins">
 
   
-  <meta name="description" content="I love Git. Live by it. Swear by it. Interact with it all the damn time. I mostly love it. Sometimes it stabs me in the face though&hellip;while on &hellip;">
+  <meta name="description" content="I just wrote a bash script to control a Spark Core powered remote control car over the internet. Hit &ldquo;f&rdquo; to go forward, hit &ldquo;b& &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://thenerdings.com">
+  <link rel="canonical" href="http://thenerdings.com/blog/2013/12/04/controlling-spark-core-remote-control-car-with-a-bash-script">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="The Nerdings" type="application/atom+xml">
@@ -75,77 +75,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/06/24/the-brutality-of-git/">The Brutality of Git</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-06-24T22:53:58-05:00" pubdate data-updated="true">Jun 24<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I love Git. Live by it. Swear by it. Interact with it all the damn time. I mostly love it.</p>
-
-<p>Sometimes it stabs me in the face though&hellip;while on master:</p>
-
-<pre><code># Grab the latest
-git pull
-
-# Deploy a branch to heroku: 
-git push --force staging feature/the_awesome_sauce:master
-</code></pre>
-
-<p>Then boom, the shank to the face:</p>
-
-<p><strong>feature/the_awesome_sauce is not deployed like I think</strong></p>
-
-<p>Instead, a old commit from the feature/the_awesome_sauce is deployed, arrrrr&hellip;</p>
-
-<p>They be different:</p>
-
-<pre><code>the_project$ git show-ref feature/the_awesome_sauce
-6c9900faca9g2d758bf6g00a7418af37b315f3a7 refs/heads/feature/private_libraries
-ecc4c76220c5d399c0e1d53e950e456a4329ad56 refs/remotes/origin/feature/private_libraries
-</code></pre>
-
-<p>Don&rsquo;t get stabbed in the face. Know the difference between remote and local branches.</p>
-
-<p>Use <code>git push --force staging origin/feature/the_awesome_sauce:master</code> next time.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/12/04/controlling-spark-core-remote-control-car-with-a-bash-script/">Controlling a Spark Core Remote Control Car With a Bash Script</a></h1>
+      <h1 class="entry-title">Controlling a Spark Core Remote Control Car With a Bash Script</h1>
     
     
       <p class="meta">
@@ -168,7 +103,7 @@ ecc4c76220c5d399c0e1d53e950e456a4329ad56 refs/remotes/origin/feature/private_lib
   </header>
 
 
-  <div class="entry-content"><p>I just wrote a bash script to control a Spark Core powered remote control car over the internet. Hit &ldquo;f&rdquo; to go forward, hit &ldquo;b&rdquo; to backward, etc. Kinda sweet.</p>
+<div class="entry-content"><p>I just wrote a bash script to control a Spark Core powered remote control car over the internet. Hit &ldquo;f&rdquo; to go forward, hit &ldquo;b&rdquo; to backward, etc. Kinda sweet.</p>
 
 <p>I grabbed the <a href="http://docs.spark.io/#/shields">RC Car Spark Core firmware code</a>, compiled it + flashed it to the core over USB by following <a href="https://github.com/spark/core-firmware">these instructions</a>. Essentially, I replaced the src/application.cpp with the code from the site and ran <code>make clean dependents all</code>, then used dfu-util to flash it.</p>
 
@@ -242,22 +177,16 @@ function rc() {
 
 
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/10/02/hello-octopress/">Hello Octopress (Goodbye Blogger)</a></h1>
-    
-    
-      <p class="meta">
-        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Joe Goggins</span></span>
+
+      
 
 
 
@@ -269,29 +198,40 @@ function rc() {
   
 
 
-<time datetime="2013-10-02T22:55:00-05:00" pubdate data-updated="true">Oct 2<span>nd</span>, 2013</time>
-        
-      </p>
+<time datetime="2013-12-04T01:14:00-06:00" pubdate data-updated="true">Dec 4<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/sparkcore/'>SparkCore</a>
+  
+</span>
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>This here blog is the new location of <a href="http://thenerdings.blogspot.com...">http://thenerdings.blogspot.com&#8230;</a></p>
-
-<p>Octopress and Jekyll seem awesome! I&rsquo;m jazzed to be able to write in my tricked-out text editor, use git + github.io/github-pages to deploy, and to develop blog posts the way I develop code.  It jives with how I roll.  For a dude who gets huffy-puffy when the pointy-clicky things fight me, a blogging platform made for hackers seems like a wonderful thing&hellip;here we go.</p>
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://thenerdings.com/blog/2013/12/04/controlling-spark-core-remote-control-car-with-a-bash-script/" data-via="" data-counturl="http://thenerdings.com/blog/2013/12/04/controlling-spark-core-remote-control-car-with-a-bash-script/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/10/02/hello-octopress/" title="Previous Post: Hello Octopress (Goodbye Blogger)">&laquo; Hello Octopress (Goodbye Blogger)</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/06/24/the-brutality-of-git/" title="Next Post: The brutality of Git">The brutality of Git &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -319,6 +259,7 @@ function rc() {
 
   
 </aside>
+
 
     </div>
   </div>
