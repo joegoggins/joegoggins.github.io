@@ -4,7 +4,7 @@
   <title><![CDATA[The Nerdings]]></title>
   <link href="http://thenerdings.com/atom.xml" rel="self"/>
   <link href="http://thenerdings.com/"/>
-  <updated>2014-06-24T23:04:55-05:00</updated>
+  <updated>2014-09-09T13:11:31-05:00</updated>
   <id>http://thenerdings.com/</id>
   <author>
     <name><![CDATA[Joe Goggins]]></name>
@@ -12,6 +12,63 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Containerization: Galloping Unicorns From the Future]]></title>
+    <link href="http://thenerdings.com/blog/2014/09/09/containerization-galloping-unicorns-from-the-future/"/>
+    <updated>2014-09-09T12:19:24-05:00</updated>
+    <id>http://thenerdings.com/blog/2014/09/09/containerization-galloping-unicorns-from-the-future</id>
+    <content type="html"><![CDATA[<p>Containerization is a galloping unicorn from the future of cloud operations. In it&rsquo;s bursting saddlebags it posesses magic relics to:</p>
+
+<ol>
+<li>eliminate the pain of setting up application development environments</li>
+<li>drastically reduce the time it takes to spin up cloud infrastructure for production, testing, high-availability, or auto-scaling</li>
+<li>decrease cloud operating costs by piling many containers onto single virtual machines instead of individual [under-utilized] machines.</li>
+<li>improve security by isolating application processes further with containers</li>
+<li>facilitate rapid sharing of complex infrastructure across cloud providers.</li>
+</ol>
+
+
+<p>But <strong>it&rsquo;s not the end all be all and in many of these promises it&rsquo;s still quite rough around the edges</strong>. It should DEFINITELY be a huge part of your medium and long term roadmaps, but if you&rsquo;re thinking you can swoop through and realize value in your organization from all of these in a couple of days, you have another thing coming.  Here&rsquo;s a list on my take of each of these areas with</p>
+
+<h3>1. eliminate the pain of setting up application development environments</h3>
+
+<p>These two articles (<a href="http://www.talkingquickly.co.uk/2014/06/rails-development-environment-with-vagrant-and-docker">1</a>, <a href="https://blog.abevoelker.com/rails-development-using-docker-and-vagrant">2</a> ) do an excellent job explaining how you go about building a Docker + Vagrant workflow to build a portable Rails environment. Though they certainly exhibit some great capabilities, if you have a team that doesn&rsquo;t spin up local VM&rsquo;s regularly, rough edges of using boot2docker (like it&rsquo;s special IP, it&rsquo;s sideloaded VM, and the <code>DOCKER_HOST</code> env var to name a few) can burn you and result in a lot confusion and time spent troublingshooting the &ldquo;portable painless dev env&rdquo;.</p>
+
+<p>It&rsquo;s still worth pursuing because the container/virtualization knowledge gained is valueable. But it&rsquo;s not gonna happen instantly.</p>
+
+<h3>2. drastically reduce the time it takes to spin up cloud infrastructure for production, testing, high-availability, or auto-scaling</h3>
+
+<p>For production container usage, <a href="https://downloads.getchef.com/chef-dk/">Chef-DK</a> + <a href="https://github.com/opscode/knife-container">knife-container</a> are the jam. However, more a still beta and their actual functionality is fairly limited, you still need to know a bunch about Docker to really do something cool here.</p>
+
+<p>For infrastructure testing, <a href="http://kitchen.ci/docs/getting-started">Test-Kitchen</a> + <a href="https://github.com/portertech/kitchen-docker">kitchen-docker</a> are incredible. However, it&rsquo;s no small feet to get the prerequisite testing harness/infrastructure up before it can deliver on the dream of spinning up entire clusters as containers, running tests, and destroying them in seconds rather than minutes.</p>
+
+<h3>3. decrease cloud operating costs by piling many containers onto single virtual machines instead of individual [under-utilized] machines.</h3>
+
+<p>I drool over <a href="https://coreos.com/">CoreOS</a>. An amazing Docker enabled technology that combines</p>
+
+<ul>
+<li>the [best] init + process supervision system in existence that most major linux distributions (including Ubuntu) are switching to (<a href="http://www.freedesktop.org/wiki/Software/systemd/">systemd</a>),</li>
+<li><a href="https://coreos.com/using-coreos/etcd/">etcd</a> a high-available key value config +service discovery tool for clusters,</li>
+<li>and <a href="https://coreos.com/docs/launching-containers/launching/fleet-example-deployment/">fleet</a> an amazing tool that makes systemd behave sensibly + intelligently across a cluster of containers.</li>
+</ul>
+
+
+<p>Of all the magical goodies the containerzation unicorn brings, this is the one I&rsquo;m currently most stoked about.  It&rsquo;s also a paradigm rethink and thus for most cloud ops shops, it&rsquo;s a big endeavor.</p>
+
+<h3>4. improve security by isolating application processes further with containers</h3>
+
+<p>Yep. It&rsquo;s great that tools like <a href="https://docs.getchef.com/containers.html">chef-container</a> strip out all of the important encryption and auth settings when spinning up new docker container.</p>
+
+<p>Again, this tech is still bleeding beta software. Furthermore, there is still a lot of uncertainty as to what the best practices are for running hybrid configurations that combine the idea of <a href="http://www.getchef.com/blog/2014/06/23/immutable-infrastructure-practical-or-not/">immutable infrastructure</a>, (also see <a href="http://chadfowler.com/blog/2013/06/23/immutable-deployments/">1</a>,<a href="http://blog.codeship.io/2013/09/06/the-codeship-workflow-part-4-immutable-infrastructure.html">2</a>) that Docker espouses mixed with some of the dynamism of Chef.  It&rsquo;s something to play with and figure out over the next couple of months.</p>
+
+<h3>5. facilitate rapid sharing of complex infrastructure across cloud providers.</h3>
+
+<p><a href="https://hub.docker.com/">DockerHub</a> is RAD! GitHub for complex OS images.  Who is gonna argue with that?</p>
+
+<p>Though there are some good images out there, without established norms about how to guarantee a published image is built a certain way, I have a hard time not viewing this as an attack vector analogous to a site or email that wants you to download and execute a malicious binary to your computer.  Given the number of smart people pouring into this space, I would expect this area to mature rapidly. Also, as the community grows the robustness of the peer review system will improve.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Brutality of Git]]></title>

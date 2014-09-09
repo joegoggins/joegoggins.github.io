@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>The Nerdings</title>
+  <title>Containerization: Galloping Unicorns From the Future - The Nerdings</title>
   <meta name="author" content="Joe Goggins">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://thenerdings.com">
+  <link rel="canonical" href="http://thenerdings.com/blog/2014/09/09/containerization-galloping-unicorns-from-the-future">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="The Nerdings" type="application/atom+xml">
@@ -75,15 +75,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/09/09/containerization-galloping-unicorns-from-the-future/">Containerization: Galloping Unicorns From the Future</a></h1>
+      <h1 class="entry-title">Containerization: Galloping Unicorns From the Future</h1>
     
     
       <p class="meta">
@@ -106,7 +103,7 @@
   </header>
 
 
-  <div class="entry-content"><p>Containerization is a galloping unicorn from the future of cloud operations. In it&rsquo;s bursting saddlebags it posesses magic relics to:</p>
+<div class="entry-content"><p>Containerization is a galloping unicorn from the future of cloud operations. In it&rsquo;s bursting saddlebags it posesses magic relics to:</p>
 
 <ol>
 <li>eliminate the pain of setting up application development environments</li>
@@ -156,84 +153,16 @@
 
 <p>Though there are some good images out there, without established norms about how to guarantee a published image is built a certain way, I have a hard time not viewing this as an attack vector analogous to a site or email that wants you to download and execute a malicious binary to your computer.  Given the number of smart people pouring into this space, I would expect this area to mature rapidly. Also, as the community grows the robustness of the peer review system will improve.</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/06/24/the-brutality-of-git/">The Brutality of Git</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">Joe Goggins</span></span>
 
-<time datetime="2014-06-24T22:53:58-05:00" pubdate data-updated="true">Jun 24<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I love Git. Live by it. Swear by it. Interact with it all the damn time. I mostly love it.</p>
-
-<p>Sometimes it stabs me in the face though&hellip;while on master:</p>
-
-<pre><code># Grab the latest
-git pull
-
-# Deploy a branch to heroku: 
-git push --force staging feature/the_awesome_sauce:master
-</code></pre>
-
-<p>Then boom, the shank to the face:</p>
-
-<p><strong>feature/the_awesome_sauce is not deployed like I think</strong></p>
-
-<p>Instead, a old commit from the feature/the_awesome_sauce is deployed, arrrrr&hellip;</p>
-
-<p>They be different:</p>
-
-<pre><code>the_project$ git show-ref feature/the_awesome_sauce
-6c9900faca9g2d758bf6g00a7418af37b315f3a7 refs/heads/feature/private_libraries
-ecc4c76220c5d399c0e1d53e950e456a4329ad56 refs/remotes/origin/feature/private_libraries
-</code></pre>
-
-<p>Don&rsquo;t get stabbed in the face. Know the difference between remote and local branches.</p>
-
-<p>Use <code>git push --force staging origin/feature/the_awesome_sauce:master</code> next time.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/12/04/controlling-spark-core-remote-control-car-with-a-bash-script/">Controlling a Spark Core Remote Control Car With a Bash Script</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -245,137 +174,32 @@ ecc4c76220c5d399c0e1d53e950e456a4329ad56 refs/remotes/origin/feature/private_lib
   
 
 
-<time datetime="2013-12-04T01:14:00-06:00" pubdate data-updated="true">Dec 4<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I just wrote a bash script to control a Spark Core powered remote control car over the internet. Hit &ldquo;f&rdquo; to go forward, hit &ldquo;b&rdquo; to backward, etc. Kinda sweet.</p>
-
-<p>I grabbed the <a href="http://docs.spark.io/#/shields">RC Car Spark Core firmware code</a>, compiled it + flashed it to the core over USB by following <a href="https://github.com/spark/core-firmware">these instructions</a>. Essentially, I replaced the src/application.cpp with the code from the site and ran <code>make clean dependents all</code>, then used dfu-util to flash it.</p>
-
-<p>I wrote up this script to make interacting with this simple Spark Core program a little less cumbersome, to use at the <a href="https://www.facebook.com/events/1422886744594947/">Tinkerer&rsquo;s Ball</a> at the Science Mueseum this Thursday, and also for folks who are looking for something minimal to wrap up curl commands that they are throwing at the Spark Cloud API to talk to their Spark Core firmware program.</p>
-
-<p><a href="https://vimeo.com/80969794">Here&rsquo;s a short vid of me getting jazzed about this with my nasty mustache</a> (This is a hangover from Spark&rsquo;s wonderous partaking in <a href="http://us.movember.com/team/1217549">Movember</a>.  Someone kill that thing! It&rsquo;s 4 days into December man!)</p>
-
-<p>The idea of this bash script is to set SPARK_CORE_DEVICE_ID and SPARK_CORE_ACCESS_TOKEN, then run a pre-defined function that loops for input and translates that <a href="http://docs.spark.io/#/api">Spark Cloud API</a> curl commands. Please fork or comment if applicable.</p>
-
-<div><script src='https://gist.github.com/7777824.js'></script>
-<noscript><pre><code># About
-# =====
-#
-# Control a Spark Core remote control car with a bash script. Why not?
-#
-# Install
-# -------
-#
-# Add something like this to you bash profile:
-#
-#     export SPARK_CORE_DEVICE_ID=YOUR_DEVICE_ID_GOES_HERE
-#     export SPARK_CORE_ACCESS_TOKEN=YOUR_ACCESS_TOKEN_GOES_HERE
-#     source ~/Downloads/spark_core_rc_car_bash_script.sh &lt;&lt;&lt;- YOU WILL NEED TO CHANGE THIS!
-#
-# Source it:
-#
-#     source ~/.profile
-#
-# And Run
-#
-#     rc_while
-#
-# Commands:
-#
-#     f=forward, b=back, l=left, r=right, s=stop
-#
-#
-# 
-function rc_while() {
-  while read _c;do
-    rc &quot;$_c&quot;
-  done
-}
-
-function rc() {
-  _base_command='curl https://api.spark.io/v1/devices/'&quot;$SPARK_CORE_DEVICE_ID&quot;'/rccar -d access_token='&quot;$SPARK_CORE_ACCESS_TOKEN&quot;' -d &quot;params=rc,__CMD__&quot;'
-  case &quot;$1&quot; in
-  f) echo &quot;Forward march!&quot;
-    _command=$(echo &quot;${_base_command}&quot; | sed 's/__CMD__/FORWARD/')
-     ;;
-  b) echo &quot;Come on back now&quot;
-    _command=$(echo &quot;${_base_command}&quot; | sed 's/__CMD__/BACK/')
-     ;;
-  l) echo &quot;Hang a lu lu&quot;
-    _command=$(echo &quot;${_base_command}&quot; | sed 's/__CMD__/LEFT/')
-     ;;
-  r) echo &quot;Hang a rubarb&quot;
-    _command=$(echo &quot;${_base_command}&quot; | sed 's/__CMD__/RIGHT/')
-     ;;
-  s) echo &quot;Stop!&quot;
-    _command=$(echo &quot;${_base_command}&quot; | sed 's/__CMD__/STOP/')
-     ;;
-  *) echo &quot;Don't know what to do with $1 : f=forward, b=back, l=left, r=right, s=stop&quot;
-     ;;
-  esac
-
-  echo $_command
-  echo $_command | bash
-}</code></pre></noscript></div>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
+<time datetime="2014-09-09T12:19:24-05:00" pubdate data-updated="true">Sep 9<span>th</span>, 2014</time>
       
-  <header>
+
+
+    </p>
     
-      <h1 class="entry-title"><a href="/blog/2013/10/02/hello-octopress/">Hello Octopress (Goodbye Blogger)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
+      <div class="sharing">
   
-
-
-<time datetime="2013-10-02T22:55:00-05:00" pubdate data-updated="true">Oct 2<span>nd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This here blog is the new location of <a href="http://thenerdings.blogspot.com...">http://thenerdings.blogspot.com&#8230;</a></p>
-
-<p>Octopress and Jekyll seem awesome! I&rsquo;m jazzed to be able to write in my tricked-out text editor, use git + github.io/github-pages to deploy, and to develop blog posts the way I develop code.  It jives with how I roll.  For a dude who gets huffy-puffy when the pointy-clicky things fight me, a blogging platform made for hackers seems like a wonderful thing&hellip;here we go.</p>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://thenerdings.com/blog/2014/09/09/containerization-galloping-unicorns-from-the-future/" data-via="" data-counturl="http://thenerdings.com/blog/2014/09/09/containerization-galloping-unicorns-from-the-future/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/06/24/the-brutality-of-git/" title="Previous Post: The brutality of Git">&laquo; The brutality of Git</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -407,6 +231,7 @@ function rc() {
 
   
 </aside>
+
 
     </div>
   </div>
