@@ -4,7 +4,7 @@
   <title><![CDATA[The Nerdings]]></title>
   <link href="http://thenerdings.com/atom.xml" rel="self"/>
   <link href="http://thenerdings.com/"/>
-  <updated>2014-09-09T13:11:31-05:00</updated>
+  <updated>2016-08-04T02:56:16-05:00</updated>
   <id>http://thenerdings.com/</id>
   <author>
     <name><![CDATA[Joe Goggins]]></name>
@@ -12,6 +12,68 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Cloud Operations Is a Game of Pandemic]]></title>
+    <link href="http://thenerdings.com/blog/2016/08/04/cloud-operations-is-a-game-of-pandemic/"/>
+    <updated>2016-08-04T01:30:24-05:00</updated>
+    <id>http://thenerdings.com/blog/2016/08/04/cloud-operations-is-a-game-of-pandemic</id>
+    <content type="html"><![CDATA[<p>Three days ago, I had the privilege of participating on an epic 24 hour cloud-ops swarm session troubleshooting various issues introduced with the rollout of the Particle&rsquo;s new Pricing scheme and <a href="https://www.particle.io">website</a>. In the delirious hours before I feel asleep in between PagerDuty alerts, I thought, dang, this sucks, but it&rsquo;s kind of awesome too, like a game of Pandemic&hellip;</p>
+
+<p>Cloud operations is a game of <a href="http://www.zmangames.com/pandemic-universe.html">Pandemic</a>.</p>
+
+<p>A contagion leaks into a complex system,
+creating havoc in many different places.</p>
+
+<p>Source unknown, direction of casuality unknown, root causes unknown, symptoms intermittent.</p>
+
+<p>What do you do?</p>
+
+<h3>You&rsquo;ve got N people each with their own unique specialized skillset</h3>
+
+<ul>
+<li>An Operations Expert connecting dots and bringing minds together so it functions as a hive</li>
+<li>A Dispatcher orchestrating communications and facilitating low friction group behavior</li>
+<li>A Scientist rapidly perceiving causes of multi-factor failures and providing complex cures quickly</li>
+<li>A Medic handling localized crises quickly without fear, killing small problems before they spread, and contributing to the broader strategy</li>
+<li>A Researcher that provides valueable knowledge, precise observations, and actionable insights when partered with the right person</li>
+<li>A Contingency Planner queuing up tasks in case what&rsquo;s happening now doesn&rsquo;t work or the virus spreads.</li>
+<li>A Quaranteen Specialist: I have no metaphor for this character at this time (this is the Internet so it&rsquo;s cool like that.)</li>
+</ul>
+
+
+<h3>There are many ways to die and 1 way to win</h3>
+
+<ul>
+<li>Win by stopping the contagion from killing everything.</li>
+<li>Loose by getting consumed by it.</li>
+</ul>
+
+
+<h3>Under conditions of crisis, you don&rsquo;t know what N is going to be and what the threats are</h3>
+
+<ul>
+<li><p>Is it one engineer trying to play all of these roles at 3am in response to a page?</p></li>
+<li><p>Is it 5 engineers swarming on a crazy failure situation all day and night enumerating mitigations as crisis after crisis compound and new variables come and go?</p></li>
+</ul>
+
+
+<h3>Conclusion</h3>
+
+<p>You never know which roles will be available in a crisis situation. The best team capable of preventing the broadest range of failures in a complex system is the one in which the greatest number of individuals can play the greatest number of roles using the best available technology.</p>
+
+<p>The cultural practice of DevOps, in the right organizational environment, gives rise to high performing teams able to manage the routine failures that complex software systems imply quickly and efficiently under pressure while having fun and feeling good about it when it&rsquo;s all said and done after a good night&rsquo;s sleep.</p>
+
+<ul>
+<li><p>Are you a spectacular, collaborative communicator that likes to play fun, intense, complex games? (read: you love what your do and like to work with smart people)</p></li>
+<li><p>Do you have an insanely deep specialized skill and/or absurdly broad software engineering breath (read: can you play the Dispatcher and the Scientist?)</p></li>
+<li><p>Wanna play Pandemic at Particle? (read: a cloud ops job)</p></li>
+</ul>
+
+
+<p><strong>We&rsquo;re hiring for Cloud Ops/DevOps/Platform Reliability Engineers</strong>. If you answered yes to any of those questions, please get in touch with me.  And if not, make sure to make time to play Pandemic with friends :).</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Containerization: Galloping Unicorns From the Future]]></title>
@@ -156,24 +218,24 @@ function rc_while() {
 }
 
 function rc() {
-  _base_command='curl https://api.spark.io/v1/devices/'&quot;$SPARK_CORE_DEVICE_ID&quot;'/rccar -d access_token='&quot;$SPARK_CORE_ACCESS_TOKEN&quot;' -d &quot;params=rc,__CMD__&quot;'
+  _base_command=&#39;curl https://api.spark.io/v1/devices/&#39;&quot;$SPARK_CORE_DEVICE_ID&quot;&#39;/rccar -d access_token=&#39;&quot;$SPARK_CORE_ACCESS_TOKEN&quot;&#39; -d &quot;params=rc,__CMD__&quot;&#39;
   case &quot;$1&quot; in
   f) echo &quot;Forward march!&quot;
-    _command=$(echo &quot;${_base_command}&quot; | sed 's/__CMD__/FORWARD/')
+    _command=$(echo &quot;${_base_command}&quot; | sed &#39;s/__CMD__/FORWARD/&#39;)
      ;;
   b) echo &quot;Come on back now&quot;
-    _command=$(echo &quot;${_base_command}&quot; | sed 's/__CMD__/BACK/')
+    _command=$(echo &quot;${_base_command}&quot; | sed &#39;s/__CMD__/BACK/&#39;)
      ;;
   l) echo &quot;Hang a lu lu&quot;
-    _command=$(echo &quot;${_base_command}&quot; | sed 's/__CMD__/LEFT/')
+    _command=$(echo &quot;${_base_command}&quot; | sed &#39;s/__CMD__/LEFT/&#39;)
      ;;
   r) echo &quot;Hang a rubarb&quot;
-    _command=$(echo &quot;${_base_command}&quot; | sed 's/__CMD__/RIGHT/')
+    _command=$(echo &quot;${_base_command}&quot; | sed &#39;s/__CMD__/RIGHT/&#39;)
      ;;
   s) echo &quot;Stop!&quot;
-    _command=$(echo &quot;${_base_command}&quot; | sed 's/__CMD__/STOP/')
+    _command=$(echo &quot;${_base_command}&quot; | sed &#39;s/__CMD__/STOP/&#39;)
      ;;
-  *) echo &quot;Don't know what to do with $1 : f=forward, b=back, l=left, r=right, s=stop&quot;
+  *) echo &quot;Don&#39;t know what to do with $1 : f=forward, b=back, l=left, r=right, s=stop&quot;
      ;;
   esac
 

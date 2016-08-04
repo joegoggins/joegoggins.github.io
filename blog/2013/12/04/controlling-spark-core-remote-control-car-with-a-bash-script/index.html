@@ -50,7 +50,7 @@
   <header role="banner"><hgroup>
   <h1><a href="/">The Nerdings</a></h1>
   
-    <h2>tails of a devops dude @ <a href="http://spark.io">spark.io</a></h2>
+    <h2>tails of a <a class="blog-subtitle-link" href="https://github.com/joegoggins">devops dude</a> @ <a class="blog-subtitle-link" href="https://www.particle.io">particle.io</a></h2>
   
 </hgroup>
 
@@ -149,24 +149,24 @@ function rc_while() {
 }
 
 function rc() {
-  _base_command='curl https://api.spark.io/v1/devices/'&quot;$SPARK_CORE_DEVICE_ID&quot;'/rccar -d access_token='&quot;$SPARK_CORE_ACCESS_TOKEN&quot;' -d &quot;params=rc,__CMD__&quot;'
+  _base_command=&#39;curl https://api.spark.io/v1/devices/&#39;&quot;$SPARK_CORE_DEVICE_ID&quot;&#39;/rccar -d access_token=&#39;&quot;$SPARK_CORE_ACCESS_TOKEN&quot;&#39; -d &quot;params=rc,__CMD__&quot;&#39;
   case &quot;$1&quot; in
   f) echo &quot;Forward march!&quot;
-    _command=$(echo &quot;${_base_command}&quot; | sed 's/__CMD__/FORWARD/')
+    _command=$(echo &quot;${_base_command}&quot; | sed &#39;s/__CMD__/FORWARD/&#39;)
      ;;
   b) echo &quot;Come on back now&quot;
-    _command=$(echo &quot;${_base_command}&quot; | sed 's/__CMD__/BACK/')
+    _command=$(echo &quot;${_base_command}&quot; | sed &#39;s/__CMD__/BACK/&#39;)
      ;;
   l) echo &quot;Hang a lu lu&quot;
-    _command=$(echo &quot;${_base_command}&quot; | sed 's/__CMD__/LEFT/')
+    _command=$(echo &quot;${_base_command}&quot; | sed &#39;s/__CMD__/LEFT/&#39;)
      ;;
   r) echo &quot;Hang a rubarb&quot;
-    _command=$(echo &quot;${_base_command}&quot; | sed 's/__CMD__/RIGHT/')
+    _command=$(echo &quot;${_base_command}&quot; | sed &#39;s/__CMD__/RIGHT/&#39;)
      ;;
   s) echo &quot;Stop!&quot;
-    _command=$(echo &quot;${_base_command}&quot; | sed 's/__CMD__/STOP/')
+    _command=$(echo &quot;${_base_command}&quot; | sed &#39;s/__CMD__/STOP/&#39;)
      ;;
-  *) echo &quot;Don't know what to do with $1 : f=forward, b=back, l=left, r=right, s=stop&quot;
+  *) echo &quot;Don&#39;t know what to do with $1 : f=forward, b=back, l=left, r=right, s=stop&quot;
      ;;
   esac
 
@@ -239,6 +239,10 @@ function rc() {
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2016/08/04/cloud-operations-is-a-game-of-pandemic/">Cloud Operations Is a Game of Pandemic</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/09/09/containerization-galloping-unicorns-from-the-future/">Containerization: Galloping Unicorns From the Future</a>
       </li>
     
@@ -268,7 +272,7 @@ function rc() {
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Joe Goggins -
+  Copyright &copy; 2016 - Joe Goggins -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

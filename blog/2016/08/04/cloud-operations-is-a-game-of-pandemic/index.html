@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>The Brutality of Git - The Nerdings</title>
+  <title>Cloud Operations Is a Game of Pandemic - The Nerdings</title>
   <meta name="author" content="Joe Goggins">
 
   
-  <meta name="description" content="I love Git. Live by it. Swear by it. Interact with it all the damn time. I mostly love it. Sometimes it stabs me in the face though&hellip;while on &hellip;">
+  <meta name="description" content="Three days ago, I had the privilege of participating on an epic 24 hour cloud-ops swarm session troubleshooting various issues introduced with the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://thenerdings.com/blog/2014/06/24/the-brutality-of-git">
+  <link rel="canonical" href="http://thenerdings.com/blog/2016/08/04/cloud-operations-is-a-game-of-pandemic">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="The Nerdings" type="application/atom+xml">
@@ -80,7 +80,7 @@
   
   <header>
     
-      <h1 class="entry-title">The Brutality of Git</h1>
+      <h1 class="entry-title">Cloud Operations Is a Game of Pandemic</h1>
     
     
       <p class="meta">
@@ -96,40 +96,67 @@
   
 
 
-<time datetime="2014-06-24T22:53:58-05:00" pubdate data-updated="true">Jun 24<span>th</span>, 2014</time>
+<time datetime="2016-08-04T01:30:24-05:00" pubdate data-updated="true">Aug 4<span>th</span>, 2016</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>I love Git. Live by it. Swear by it. Interact with it all the damn time. I mostly love it.</p>
+<div class="entry-content"><p>Three days ago, I had the privilege of participating on an epic 24 hour cloud-ops swarm session troubleshooting various issues introduced with the rollout of the Particle&rsquo;s new Pricing scheme and <a href="https://www.particle.io">website</a>. In the delirious hours before I feel asleep in between PagerDuty alerts, I thought, dang, this sucks, but it&rsquo;s kind of awesome too, like a game of Pandemic&hellip;</p>
 
-<p>Sometimes it stabs me in the face though&hellip;while on master:</p>
+<p>Cloud operations is a game of <a href="http://www.zmangames.com/pandemic-universe.html">Pandemic</a>.</p>
 
-<pre><code># Grab the latest
-git pull
+<p>A contagion leaks into a complex system,
+creating havoc in many different places.</p>
 
-# Deploy a branch to heroku: 
-git push --force staging feature/the_awesome_sauce:master
-</code></pre>
+<p>Source unknown, direction of casuality unknown, root causes unknown, symptoms intermittent.</p>
 
-<p>Then boom, the shank to the face:</p>
+<p>What do you do?</p>
 
-<p><strong>feature/the_awesome_sauce is not deployed like I think</strong></p>
+<h3>You&rsquo;ve got N people each with their own unique specialized skillset</h3>
 
-<p>Instead, a old commit from the feature/the_awesome_sauce is deployed, arrrrr&hellip;</p>
+<ul>
+<li>An Operations Expert connecting dots and bringing minds together so it functions as a hive</li>
+<li>A Dispatcher orchestrating communications and facilitating low friction group behavior</li>
+<li>A Scientist rapidly perceiving causes of multi-factor failures and providing complex cures quickly</li>
+<li>A Medic handling localized crises quickly without fear, killing small problems before they spread, and contributing to the broader strategy</li>
+<li>A Researcher that provides valueable knowledge, precise observations, and actionable insights when partered with the right person</li>
+<li>A Contingency Planner queuing up tasks in case what&rsquo;s happening now doesn&rsquo;t work or the virus spreads.</li>
+<li>A Quaranteen Specialist: I have no metaphor for this character at this time (this is the Internet so it&rsquo;s cool like that.)</li>
+</ul>
 
-<p>They be different:</p>
 
-<pre><code>the_project$ git show-ref feature/the_awesome_sauce
-6c9900faca9g2d758bf6g00a7418af37b315f3a7 refs/heads/feature/private_libraries
-ecc4c76220c5d399c0e1d53e950e456a4329ad56 refs/remotes/origin/feature/private_libraries
-</code></pre>
+<h3>There are many ways to die and 1 way to win</h3>
 
-<p>Don&rsquo;t get stabbed in the face. Know the difference between remote and local branches.</p>
+<ul>
+<li>Win by stopping the contagion from killing everything.</li>
+<li>Loose by getting consumed by it.</li>
+</ul>
 
-<p>Use <code>git push --force staging origin/feature/the_awesome_sauce:master</code> next time.</p>
+
+<h3>Under conditions of crisis, you don&rsquo;t know what N is going to be and what the threats are</h3>
+
+<ul>
+<li><p>Is it one engineer trying to play all of these roles at 3am in response to a page?</p></li>
+<li><p>Is it 5 engineers swarming on a crazy failure situation all day and night enumerating mitigations as crisis after crisis compound and new variables come and go?</p></li>
+</ul>
+
+
+<h3>Conclusion</h3>
+
+<p>You never know which roles will be available in a crisis situation. The best team capable of preventing the broadest range of failures in a complex system is the one in which the greatest number of individuals can play the greatest number of roles using the best available technology.</p>
+
+<p>The cultural practice of DevOps, in the right organizational environment, gives rise to high performing teams able to manage the routine failures that complex software systems imply quickly and efficiently under pressure while having fun and feeling good about it when it&rsquo;s all said and done after a good night&rsquo;s sleep.</p>
+
+<ul>
+<li><p>Are you a spectacular, collaborative communicator that likes to play fun, intense, complex games? (read: you love what your do and like to work with smart people)</p></li>
+<li><p>Do you have an insanely deep specialized skill and/or absurdly broad software engineering breath (read: can you play the Dispatcher and the Scientist?)</p></li>
+<li><p>Wanna play Pandemic at Particle? (read: a cloud ops job)</p></li>
+</ul>
+
+
+<p><strong>We&rsquo;re hiring for Cloud Ops/DevOps/Platform Reliability Engineers</strong>. If you answered yes to any of those questions, please get in touch with me.  And if not, make sure to make time to play Pandemic with friends :).</p>
 </div>
 
 
@@ -152,7 +179,7 @@ ecc4c76220c5d399c0e1d53e950e456a4329ad56 refs/remotes/origin/feature/private_lib
   
 
 
-<time datetime="2014-06-24T22:53:58-05:00" pubdate data-updated="true">Jun 24<span>th</span>, 2014</time>
+<time datetime="2016-08-04T01:30:24-05:00" pubdate data-updated="true">Aug 4<span>th</span>, 2016</time>
       
 
 
@@ -160,7 +187,7 @@ ecc4c76220c5d399c0e1d53e950e456a4329ad56 refs/remotes/origin/feature/private_lib
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://thenerdings.com/blog/2014/06/24/the-brutality-of-git/" data-via="" data-counturl="http://thenerdings.com/blog/2014/06/24/the-brutality-of-git/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://thenerdings.com/blog/2016/08/04/cloud-operations-is-a-game-of-pandemic/" data-via="" data-counturl="http://thenerdings.com/blog/2016/08/04/cloud-operations-is-a-game-of-pandemic/" >Tweet</a>
   
   
   
@@ -169,10 +196,8 @@ ecc4c76220c5d399c0e1d53e950e456a4329ad56 refs/remotes/origin/feature/private_lib
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/12/04/controlling-spark-core-remote-control-car-with-a-bash-script/" title="Previous Post: Controlling a Spark Core remote control car with a bash script">&laquo; Controlling a Spark Core remote control car with a bash script</a>
+        <a class="basic-alignment left" href="/blog/2014/09/09/containerization-galloping-unicorns-from-the-future/" title="Previous Post: Containerization: Galloping Unicorns from The Future">&laquo; Containerization: Galloping Unicorns from The Future</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/09/09/containerization-galloping-unicorns-from-the-future/" title="Next Post: Containerization: Galloping Unicorns from The Future">Containerization: Galloping Unicorns from The Future &raquo;</a>
       
     </p>
   </footer>

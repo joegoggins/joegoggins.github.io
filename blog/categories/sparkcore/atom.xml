@@ -4,7 +4,7 @@
   <title><![CDATA[Category: SparkCore | The Nerdings]]></title>
   <link href="http://thenerdings.com/blog/categories/sparkcore/atom.xml" rel="self"/>
   <link href="http://thenerdings.com/"/>
-  <updated>2014-09-09T13:11:31-05:00</updated>
+  <updated>2016-08-04T02:56:16-05:00</updated>
   <id>http://thenerdings.com/</id>
   <author>
     <name><![CDATA[Joe Goggins]]></name>
@@ -64,24 +64,24 @@ function rc_while() {
 }
 
 function rc() {
-  _base_command='curl https://api.spark.io/v1/devices/'&quot;$SPARK_CORE_DEVICE_ID&quot;'/rccar -d access_token='&quot;$SPARK_CORE_ACCESS_TOKEN&quot;' -d &quot;params=rc,__CMD__&quot;'
+  _base_command=&#39;curl https://api.spark.io/v1/devices/&#39;&quot;$SPARK_CORE_DEVICE_ID&quot;&#39;/rccar -d access_token=&#39;&quot;$SPARK_CORE_ACCESS_TOKEN&quot;&#39; -d &quot;params=rc,__CMD__&quot;&#39;
   case &quot;$1&quot; in
   f) echo &quot;Forward march!&quot;
-    _command=$(echo &quot;${_base_command}&quot; | sed 's/__CMD__/FORWARD/')
+    _command=$(echo &quot;${_base_command}&quot; | sed &#39;s/__CMD__/FORWARD/&#39;)
      ;;
   b) echo &quot;Come on back now&quot;
-    _command=$(echo &quot;${_base_command}&quot; | sed 's/__CMD__/BACK/')
+    _command=$(echo &quot;${_base_command}&quot; | sed &#39;s/__CMD__/BACK/&#39;)
      ;;
   l) echo &quot;Hang a lu lu&quot;
-    _command=$(echo &quot;${_base_command}&quot; | sed 's/__CMD__/LEFT/')
+    _command=$(echo &quot;${_base_command}&quot; | sed &#39;s/__CMD__/LEFT/&#39;)
      ;;
   r) echo &quot;Hang a rubarb&quot;
-    _command=$(echo &quot;${_base_command}&quot; | sed 's/__CMD__/RIGHT/')
+    _command=$(echo &quot;${_base_command}&quot; | sed &#39;s/__CMD__/RIGHT/&#39;)
      ;;
   s) echo &quot;Stop!&quot;
-    _command=$(echo &quot;${_base_command}&quot; | sed 's/__CMD__/STOP/')
+    _command=$(echo &quot;${_base_command}&quot; | sed &#39;s/__CMD__/STOP/&#39;)
      ;;
-  *) echo &quot;Don't know what to do with $1 : f=forward, b=back, l=left, r=right, s=stop&quot;
+  *) echo &quot;Don&#39;t know what to do with $1 : f=forward, b=back, l=left, r=right, s=stop&quot;
      ;;
   esac
 
