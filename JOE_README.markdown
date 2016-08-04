@@ -3,6 +3,10 @@ About this file
 
 A place for notes for myself on hacks to Octopress, Jekyll, etc.
 
+Posts I should write
+---
+
+- why in gods name is compiling ruby so hard: Ruby is wonderful and productive. But when you spend 5% of your career compiling software for it...
 
 Key Use Cases
 --------------

@@ -4,7 +4,7 @@
 
 url: http://thenerdings.com
 title: The Nerdings
-subtitle: tails of a devops dude @ <a href="http://spark.io">spark.io</a>
+subtitle: tails of a <a class="blog-subtitle-link" href="https://github.com/joegoggins">devops dude</a> @ <a class="blog-subtitle-link" href="https://www.particle.io">particle.io</a>
 author: Joe Goggins
 simple_search: http://google.com/search
 description: Bla bla bla

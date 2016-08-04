@@ -1,20 +1,25 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
-
 body > header {
   background-image: url('/images/header5.png');
 }
 
-body > header h1 a, body>header h1 a:visited, body>header h1 a:hover { 
+// "the nerdings"
+body > header h1 a, body>header h1 a:visited, body>header h1 a:hover {
   color: #000;
 }
 
+// "tails of a devops dude @ particle.io
 body > header h2  {
   font-style: italic;
   color: #000;
-  a, a:visited {
+  a:hover, a:visited {
     font-style: italic;
     text-decoration: none;
     color: #000;
+  }
+  a.blog-subtitle-link {
+    border-bottom: 2px dotted grey;
+    text-decoration: none;
   }
 }
